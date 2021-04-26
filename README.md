@@ -14,6 +14,11 @@ Ecoli: This data set contains information of Escherichia coli. It is a bacterium
 ### Implementation
 
 1)Preparing the data.
+![Data prepared](https://github.com/samyak3028/Neural_Network/blob/main/preparing(1).png?raw=true)
+
+![Data prepared](https://github.com/samyak3028/Neural_Network/blob/main/preparing(2).png?raw=true)
+
+
 
 2)Using one hot encoding technique to convert categorical value to numerical
 
