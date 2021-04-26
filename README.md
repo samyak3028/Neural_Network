@@ -14,10 +14,16 @@ Ecoli: This data set contains information of Escherichia coli. It is a bacterium
 ### Implementation
 
 1)Preparing the data.
+
+#### Iris Dataset
+
 ![Data prepared](https://github.com/samyak3028/Neural_Network/blob/main/preparing(1).png?raw=true)
 
-![Data prepared](https://github.com/samyak3028/Neural_Network/blob/main/preparing(2).png?raw=true)
 
+#### Protein Localization Sites
+
+
+![Data prepared](https://github.com/samyak3028/Neural_Network/blob/main/preparing(2).png?raw=true)
 
 
 2)Using one hot encoding technique to convert categorical value to numerical
@@ -45,7 +51,22 @@ Neural network consists of the An input layer, Arbitary number of hidden layer,A
 
 13)The accuracy function(accuracy) determins the accuracy of function
 
-14)Prediciton is done
+14)Prediciton is done.
+
+#### Iris Dataset Output
+
+![Data predicted](https://github.com/samyak3028/Neural_Network/blob/main/iteration_prediction(1).png?raw=true)
+
+
+#### Protein Localization Sites
+
+![Data iterated](https://github.com/samyak3028/Neural_Network/blob/main/iteration(2).png?raw=true)
+
+
+
+![Data iterated](https://github.com/samyak3028/Neural_Network/blob/main/prediction(2).png?raw=true)
+
+
 
 ### Result
 Iris dataset was iterated 100 times and Ecoli was 500 times. Accuracy was incresed as iterations increased.  For iris data training accurac was ~98% and testing accuracy was ~87%, whereas for Ecoli dataset ~87% training accuracy, ~82% testing accuracy.
