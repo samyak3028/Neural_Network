@@ -5,7 +5,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 pd.set_option('display.max_rows', 200)
 
-df = pd.read_csv('C:/Users/Hp 840/Desktop/New folder/One_Neuron_To_Another-master/data/iris.data', sep=',', header=None, names=['Sepal_Length','Sepal_Width',
+df = pd.read_csv('../iris.data', sep=',', header=None, names=['Sepal_Length','Sepal_Width',
                                                                    'Petal_Length','Petal_Width','Species_Class'])
 
 #Preparing the input data
