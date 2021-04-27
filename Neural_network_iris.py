@@ -13,7 +13,7 @@ X = df[['Sepal_Length', 'Sepal_Width', 'Petal_Length', 'Petal_Width']]
 X = np.array(X)
 #X[:5]
 
-#To map the value of species to numerical we use oneHotencoder module
+#To map the value of species to numerical we use oneHotencoder 
 encoder = OneHotEncoder(sparse=False)
 
 Y = df.Species_Class
@@ -96,7 +96,7 @@ def trainNetwork(X, Y, rate, weights):
         weights = backword_propagation(y, output, weights, layers)
 
     return weights
-
+#sigmoid activation fucntion is used
 def Sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
@@ -149,5 +149,5 @@ weights = neural_network(X_train, Y_train, X_val, Y_val, iterations=iterations, 
 #accuracy
 print("Accuracy: {}".format(accuracy(X_test, Y_test, weights)))
 
-print( list(Y_test[0]))
-print(predict(X_test[0], weights))
+print( list(Y_test[0]))  # prints input data
+print(predict(X_test[0], weights)) #prints predicited data
