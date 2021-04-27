@@ -5,7 +5,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 pd.set_option('display.max_rows', 200)
 
-df = pd.read_csv('../data/Ecoli.csv', header=None, names=['SequenceName','McGeoch_method',
+df = pd.read_csv('../Ecoli.csv', header=None, names=['SequenceName','McGeoch_method',
                                                                    'Heijnes_method','LIP','CHG','Score_AAC','Score_ALOM1','Score_ALOM2','Class'])
 
 #Preparing the input data
@@ -50,7 +50,7 @@ def neural_network(X_train, Y_train, X_val=None, Y_val=None, iterations=10, node
                 print("Validation Accuracy:{}".format(accuracy(X_val, Y_val, weights)))
 
     return weights
-
+# forward propagation function
 def feed_Forward(x, weights, layers):
     output, current_input = [x], x
 
@@ -60,7 +60,8 @@ def feed_Forward(x, weights, layers):
         current_input = np.append(1, activation) # add the bias = 1
 
     return output
-
+  
+# backward propagation function
 def backword_Propagation(y, output, weights, layers):
     outputFinal = output[-1]
     error = np.matrix(y - outputFinal) #Calculate the error at last output
@@ -95,6 +96,7 @@ def trainNetwork(X, Y, rate, weights):
 
     return weights
 
+  
 def Sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
@@ -148,5 +150,5 @@ weights = neural_network(X_train, Y_train, X_val, Y_val, iterations=iterations, 
 #Final testing accuracy
 print("Testing Accuracy: {}".format(accuracy(X_test, Y_test, weights)))
 
-print( list(Y_test[0]))
-print(predict(X_test[0], weights))
+print( list(Y_test[0]))  #prints input
+print(predict(X_test[0], weights)) #prints predicited output
